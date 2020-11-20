@@ -1,0 +1,66 @@
+body {
+  background: #fff url('images/gradbg.jpg') top left repeat-x;
+  color: #000;
+  margin: 0;
+  padding:0;
+  border: 0;
+  font-family: Verdana, Arial, sans-serif; font-size: 1em;
+}
+
+div {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#bggraphic {
+  background: url('images/pen.png') top left no-repeat;
+  height: 278px;
+  width: 362px;
+  position: absolute;
+  left: 50%;
+  z-index: 100;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  background: url('images/headbg.png') top left repeat;
+  padding: 10px 0;
+}
+
+#references cite {
+  margin: 1em 0 0 3em;
+  text-indent: -3em;
+  display: block;
+  font-style: normal;
+  padding-right: 3px;
+}
+
+.website {
+  border-right: 5px solid blue;
+}
+
+.book {
+  border-right: 5px solid red;
+}
+
+.article {
+  border-right: 5px solid green;
+}
+
+#footer {
+  font-size: 0.5em;
+  border-top: 1px solid #000;
+  margin-top: 20px;
+}
+
+#footer a {
+  color: #000;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}

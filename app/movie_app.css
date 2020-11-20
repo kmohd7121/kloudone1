@@ -1,0 +1,900 @@
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.movie {
+  margin-top: 40px;
+  /* padding-left: 10rem; */
+  /* padding: 2px 5px; */
+  /* margin-left: 10rem;*/
+  /* border-left:4px solid yellow; */
+}
+
+section {
+  position: relative;
+  width: 80%;
+  margin-top: 25px;
+  display: flex;
+  margin-left: 10rem;
+  /* padding-right: 10rem;  */
+  align-items: center;
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+  transition: 250ms all;
+}
+
+section .imageContainer {
+  flex: 0 0 auto;
+}
+
+.content {
+  display: none;
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 20px;
+}
+
+
+.content-display {
+  display: block;
+}
+
+
+.content-display {
+  display: block;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content div {
+  margin: 10px;
+}
+
+
+#content-close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  padding: 10px;
+  /* width: 35px;; */
+  border: 1px solid lightgrey;
+  border-radius: 45%;
+  left: 20px;
+}
+
+
+.imageContainer {
+  transition: 250ms all;
+  width: 300px;
+}
+
+
+.imageContainer:hover {
+  margin-left: 0 40px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.imageContainer {
+  border-radius: 4px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.imageContainer img {
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  background-color: black;
+  border-color: none;
+  outline: none;
+  color: white;
+  /* min-height: 38px;
+  font-weight: 400; */
+  text-align: center;
+  cursor: pointer;
+  padding: .100rem .20rem;
+  font-size: 1rem;
+  /* line-height: 1.5; */
+  border-radius: .25rem;
+}
+
+/* .form-group {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    width: 25%;
+} */
+
+.form-control {
+  width: 40rem;
+  /* padding: 5px 5px; */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+
+/*footer section*/
+footer {
+	background:black;
+  /*height: 400px;*/
+	padding: 15px 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  color: white;
+}
+footer .social-icons, footer .about-site, footer .terms-of-use, footer .company, footer .footnote {
+  position: relative;
+  text-decoration: none;
+  color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+footer .social-icons a i {
+  font-size: 21px;
+	padding: 12px;
+	color: #fff;
+}
+
+footer .social-icons a:hover i {
+	background: #1b1b1b;
+	border-radius: 50%;
+}
+
+footer a {
+	padding-left: 2rem;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+.about-site a,.terms-of-use a,.company a{
+  text-decoration: none;
+  color: white;
+  text-decoration: bold;
+
+}
+ form{
+  display: flex;
+}
+.imdb{
+  width:8rem;
+  height: 4rem;
+  background-color: black;
+  color:black;
+
+}
+
+.form-group{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  float: left; 
+  width: 60%;
+  }
+
+  @media screen and (max-width: 600px) 
+  {
+    div.btn1 
+    {
+      display: none;
+    }
+     
+  }
+  
+
+.logo{
+  /*padding-left: 8rem; */
+  display: flex;
+  justify-content: center;
+  width: 16%;
+  float: left; 
+    
+}
+.menu{
+  /*padding-left: 1rem; */
+  display: flex;
+  justify-content: center;
+  padding-top: .25rem;
+  width: 16%;
+  float: left;
+} 
+.btn1{
+  padding-left: 1rem;
+  /*display: flex;
+  justify-content: center;*/
+  padding-top: .50rem;
+  float: left; 
+  width: 16%;
+}
+.btn2{
+  float: left;
+  width: 16%;
+  padding-top: .50rem ;
+}
+.img2{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+  position: relative; 
+
+ 
+
+}
+.search-movie{
+  font-size: 1.5rem;
+  /* padding: 2px 5px;  */
+  margin-left: 10%;
+  padding-bottom: 10px;
+  
+}
+@media screen and (max-width: 600px) 
+  {
+    .search-movie
+    {
+      margin-left: 15%;
+    }
+     
+  }
+
+.maindiv{
+  width: 65%;
+  height: 400px;
+  position: relative; 
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%, -50%);
+  background-image: url('https://images-na.ssl-images-amazon.com/images/G/02/shazam/970x250-fa68eedb-b5be-410b-b695-db89508cb428.jpg');
+  background-size: 100% 100%;
+  /* box-shadow: 1px 2px 10px 5px white; */
+  animation: slider 10s infinite linear;
+}
+@keyframes slider{
+  0%{ background-image: url('https://m.media-amazon.com/images/M/MV5BODUxNDQyNDUtNWExZi00MmExLWFmMTEtNzM1M2YwZDU4MGI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL40_UY521_CR34,0,352,521_.jpg');}
+  30%{background-image: url('https://m.media-amazon.com/images/M/MV5BNWRlMWJlYWQtODM2Yy00ZGFkLTgyYmItZTI2MmYyNThhZjliXkEyXkFqcGdeQWFybm8@._V1_QL40_UX1000_CR0,52,1000,563_.jpg');}
+  70%{background-image: url('https://m.media-amazon.com/images/M/MV5BOWFhYjQ4NDYtODlmMy00MTBhLTliZGMtNjZkNmNlMzgyNjBjXkEyXkFqcGdeQXVyOTYwMTkyNA@@._V1_QL40_UX352_CR0,1,352,521_.jpg');}
+}
+@media screen and (max-width: 600px) 
+  {
+    .maindiv
+    {
+      width: 100%;
+    }
+     
+  }
+
+@media screen and (max-width: 600px) {
+  #movies-searchable,#movies-container,.search-movie{
+    /* float: left; */
+    margin-right: 10rem;
+    /* display: inline-flexbox; */
+    justify-content: center;
+    text-align: center;
+
+
+  }
+}
+/* Explore movies & TV shows start */
+.poster-card #img11{
+  background: url(https://m.media-amazon.com/images/M/MV5BMTI5NmViY2YtNDk5NC00NjY2LWFlNGYtOGEwNzY1MTZmMjFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX140_CR0,7,140,207_.jpg); 
+  background-position: center;
+  background-size: cover;
+} 
+
+.poster-card #img21 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTI5NmViY2YtNDk5NC00NjY2LWFlNGYtOGEwNzY1MTZmMjFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX140_CR0,7,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img31 {
+  background: url(https://m.media-amazon.com/images/M/MV5BYmNjYzRlM2YtZTZjZC00ODVmLTljZWMtODg1YmYyNDBiNzU3XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_UY207_CR8,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img41 {
+  background: url(https://m.media-amazon.com/images/M/MV5BY2VlOTc4ZjctYjVlMS00NDYwLWEwZjctZmYzZmVkNGU5NjNjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UY207_CR5,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img51 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZTEyMTlmYTUtMDE0My00NWJmLWJlZmEtNzhjNGI0Mzk0NTA4XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_UY207_CR8,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img61 {
+  background: url(https://m.media-amazon.com/images/M/MV5BN2ZhMTI3MDctYTlhYy00NjBlLWEyOGEtYzE3MjM4MWFkNmQwXkEyXkFqcGdeQXVyNTA3NTQ4OTg@._V1_UY207_CR6,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* Explore movies & TV shows end */
+
+
+
+/*top pick*/
+.top-picks {
+	margin-top: 20px;
+}
+
+
+
+.top-picks .heading {
+  padding: 2px 5px;
+  
+}
+
+.top-picks h2 {
+	color: #fff;
+}
+
+.flexbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+} 
+
+.poster-card {
+  width: 10rem;
+  height: 460px;
+  background: #1b1b1b;
+  margin: 10px 15px;
+  border-radius: 4px;
+}
+
+.poster-card .image {
+  width: 100%;
+  height: 237px;
+}
+
+ .poster-card #img1 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/3/3c/Poster_of_Mirzapur_2018.jpg); 
+  background-position: center;
+  background-size: cover;
+} 
+
+.poster-card #img2 {
+  background: url(https://mamasgeeky.com/wp-content/uploads/2020/11/the-queens-gambit-poster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNjgxZTMxNmQtZGFkZS00NDUyLTllMzYtOTE0ZjdlMjM1ZWU0XkEyXkFqcGdeQXVyMTAyMTE1MDA1._V1_UX182_CR0,0,182,268_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img4 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR85,0,630,1200_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img5 {
+  background: url(https://i.etsystatic.com/15375993/r/il/cbafe5/1303342253/il_570xN.1303342253_qphh.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img6 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img7 {
+  background: url(https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img8 {
+  background: url(https://i.pinimg.com/originals/28/b9/95/28b995d070004d19862569ade1e820ef.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img9 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img10 {
+  background: url(https://i.pinimg.com/originals/cc/47/a5/cc47a507854dfe4ea145ebb4c9ae51c4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img11 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img12 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZDQ3MDEwNTEtZTlmZi00MjA2LWExZTYtNmMwNmZkNmI0ZTczXkEyXkFqcGdeQXVyMTE5MDgzMjMx._V1_UY268_CR4,0,182,268_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster-card #img13 {
+  background: url(https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.ratings, .movie-title, .watchlist, .trailer-and-info {
+  padding: 10px 15px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ratings span {
+  font-size: 16px;
+  color: #d2d2d2;
+}
+
+.ratings svg {
+  width: 15px;
+  height: 15px;
+  color: yellow;
+  margin: 0 5px;
+}
+
+.watchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333333;
+  margin: 2px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.watchlist span {
+  color: #2a9df4;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.watchlist svg {
+  color: #2a9df4;
+  width: 21px;
+  height: 21px;
+}
+
+.watchlist:hover {
+  background: #555555;
+
+}
+
+.movie-title {
+  width: 160px;
+  height: 58px;
+}
+
+.trailer-and-info {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trailer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: gray;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.trailer span {
+  font-weight: bold;
+}
+
+.info {
+  color: gray;
+  padding: 6px 9px;
+  border-radius: 50%;
+}
+
+.info:hover {
+  background: #333333;
+  color: #fff;
+}
+
+.trailer:hover {
+  background: #333333;
+  color: #fff;
+}
+.get-imdb{
+
+  background-color:burlywood;
+  text-decoration: none;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.get1{
+  
+  background-color:;
+  width: 10rem;
+  font-size: 20px;
+  color: gray;
+  text-decoration: none;
+  /* border-radius: .2rem; */
+  padding: 10px;
+}
+.btn5{
+
+  text-align: center;
+  color: black;
+  background-color: yellow;
+  font-weight: 10px;
+  font-size: 18px;
+  border:none;
+  padding-top: 7px;
+  border-radius: .2rem;
+
+}
+
+/*birthday div*/
+.sub-heading h2{
+  color: white;
+  font-size: 24px;
+  margin: 4px 0 8px;
+  font-weight: normal;
+}
+.sub-heading p.subtitle{
+  color: white;
+  font-size: 18px;
+  margin: 4px 0 8px;
+  font-weight: normal;
+}
+.birthday-card .birthday-img{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #1167b1;
+  margin: 0 auto;
+}
+
+.birthday-card p{
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+
+}
+.birthday-card #image1{
+  background: url(https://m.media-amazon.com/images/M/MV5BMTY5ODcxMDU4NV5BMl5BanBnXkFtZTcwMjAzNjQyNQ@@._V1_UX140_CR0,9,140,140_.jpg);
+  background-position: center;
+  background-size: contain;
+}
+.birthday-card #image2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BYmY2OGMzM2YtMDVlNi00NzdhLTkzNDMtZjA0M2I2YzNiNDIyXkEyXkFqcGdeQXVyNjc1OTk0NzA@._V1_UX140_CR0,0,140,140_.jpg);
+  background-position: center;
+  background-size: contain;
+}
+.birthday-card #image3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTcyNDA4Nzk3N15BMl5BanBnXkFtZTcwNDYzMjMxMw@@._V1_UX140_CR0,17,140,140_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image4 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTg2NzAzNzE5N15BMl5BanBnXkFtZTcwMjMyODM0MQ@@._V1_UX140_CR0,0,140,140_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image5 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMjE2OTkyOTkzMl5BMl5BanBnXkFtZTcwODYxMTUwOA@@._V1_UX140_CR0,0,140,140_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.birthday-card #image6 {
+  background: url(https://m.media-amazon.com/images/M/MV5BODVkMGU3ZDgtYzJkYS00YTIyLThmYWQtZmY3NTk5ZTdlYjAzXkEyXkFqcGdeQXVyMjYwNjY4MTM@._V1_UX140_CR0,12,140,140_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.birthday-card {
+  width: 160px;
+  height: 200px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+/* birthday div end*/
+/* Recently viewed start */
+.top-picks {
+	margin-top: 20px;
+}
+.top-picks .heading {
+  padding: 2px 5px;
+ 
+}
+
+.top-head h2 {
+	color: #fff;
+}
+
+.flexbox1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.poster1-card {
+  width: 160px;
+  height: 300px; 
+  background: #1b1b1b;
+  margin: 10px 15px;
+  border-radius: 4px;
+   
+}
+.movie-title a{
+  color: white;
+  text-decoration: none;
+}
+
+.poster1-card .image {
+  width: 100%;
+  height: 237px;
+}
+.poster1-card #img1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZDQ2NTdmNDgtMGIwMS00ODE2LTk5M2EtZGZhYzc4MWRlNTU3XkEyXkFqcGdeQXVyNTc4MjczMTM@._V1_UX140_CR0,0,140,207_.jpg); 
+  background-position: center;
+  background-size: cover;
+}
+
+.poster1-card #img2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTY5ODcxMDU4NV5BMl5BanBnXkFtZTcwMjAzNjQyNQ@@._V1_UY207_CR2,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster1-card #img3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BN2NlNGYwYTUtMTczMi00NGVjLTgwMzUtNjBkZjIyNDc2NjcxXkEyXkFqcGdeQXVyODQ5NDUwMDk@._V1_UX140_CR0,1,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster1-card #img4 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY1200_CR85,0,630,1200_AL_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster1-card #img5 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZGJkMDRiOWUtZTMzZC00YzYzLWI1NDAtODc4ZGFiN2Q2MmJlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY207_CR13,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.poster1-card #img6 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTI3MWZmMjgtYWNjNC00NTNhLWE5YjgtNTVkYWM5NjMwODZmXkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_UY207_CR68,0,140,207_.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* Recently viewed end */
+
+/* IMDb Original start*/
+
+.sub-heading p.subtitle {
+  color: white;
+  font-size: 18px;
+  margin: 4px 0 8px;
+  font-weight: normal;
+}
+
+.video-card {
+  width: 345px;
+  height: 210px;
+  background: #000;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.video-card .video {
+  width: 100%;
+  height: 100%;
+}
+
+.video-card p {
+  color: #fff;
+  margin: 6px 0;
+}
+
+.video-card #vc1 {
+  background: url(https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BNWUxNjMzMmYtZGI2ZS00OTRlLWE1ZmQtMDQ0MmI0NmMzMzVmXkEyXkFqcGdeQW1pYnJ5YW50._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+.video-card #vc2 {
+  background: url(https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BZWJjYjdlZjEtNWEyMS00NzUwLWJiZDItZjFmZjhlYWZjZWY2XkEyXkFqcGdeQWxpenpp._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+.video-card #vc3 {
+  background: url(https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX500_CR0,0,500,281_.jpg%20500w,%20https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX750_CR0,0,750,422_.jpg%20750w,%20https://m.media-amazon.com/images/M/MV5BMTYzZGFiMzQtMjlkYy00MmU4LTlmZjctZDVmOWRjYmExZGEwXkEyXkFqcGdeQWplZmZscA@@._V1_UX1000_CR0,0,1000,563_.jpg%201000w);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+/* IMDb original end */
+
+@media screen and (min-width: 600px) 
+  {
+    .get-imdb
+    {
+      display: none;
+    }
+     
+  }
+
+
+  .movie >h2{
+    margin-left: 10%;
+  }
+
+@media screen and (min-width: 1000px) 
+  {
+    .sub-heading ,.top-picks,.heading1,.sign-title
+    {
+      margin-left: 10%;
+    }
+     
+  }
+  @media screen and (min-width: 1000px) 
+  {
+    .flexbox-container
+    {
+      margin-left: -10%;
+    }
+     
+  }  
+
+  /* ipc icon */
+  .ipc-icon {
+    height: 1em;
+    vertical-align: baseline;
+    width: 1em;
+  }
+  .plus{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .plus1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+#plu{
+  color: gray;
+}
+.sign-into{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+
+}
+.btn6{
+  background-color: yellow;
+  height: 2.5rem;
+  width: 10rem;
+  /* font-size: 1.5rem; */
+  border-radius: 5px;
+}
+@media screen and (max-width: 600px) 
+  {
+    .sign-title
+    {
+      margin-left: 17%;
+    }
+     
+  } 
+.btn7{
+  background-color: yellow;
+  height: 2.2rem;
+  width: 18rem;
+  color: white;
+  /* font-size: 1.5rem; */
+  border-radius: 5px;
+  border-color: white;
+  background-color: black;
+}
+@media screen and (min-width: 1000px) 
+  {
+    .more-to-watch,.btn7,.Exclusive,.Explore-movies
+    {
+      margin-left: 10%;
+    }
+     
+  } 
+#btn8{
+  margin-left: 1%;
+}
+@media screen and (max-width: 600px) 
+  {
+    .btn7,#btn8
+    {
+      width:13rem;
+    }
+     
+  } 
+.Exclusive,.Explore-movies{
+  color: yellow;
+}
+  
+@media screen and (max-width: 600px) 
+  {
+    .img2
+    {
+      display: none;
+    }
+     
+  } 

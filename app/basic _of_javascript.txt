@@ -1,0 +1,220 @@
+My Name is Mohd Kalam
+yesterday I learned Javascript and how to declear variable in javascrip,if_else condition,how to use function
+,switch statement,loop,use of getElementById,use of getElementsByTagNamea ,how to create object.
+i am using telusko to learn javascript.
+it is very helpful as it contains short video  lectures 4 or 5 min.
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>my title</title>
+    <script type="text/javascript">
+    //use of document.write
+        document.write("<h1>hello kalam<h1>");
+        document.write("<h2>how are you</h2>");
+    // How to declear variable
+        var num=16;
+        var name="kloudone";
+        var flag=true;
+        alert(num)
+        document.write(name)
+        var a=3;
+        var b=3;
+        var result=a+b;
+        document.write("<h1>Result is:"+result+"</h1")
+    // Use of if else condition.
+            var x=3;
+            if(x%2==0)
+            {
+                document.write("even number");
+            }
+            else{
+                document.write("odd number")
+            }
+    // Use of nested if else 
+            var x=4
+            if(x>0){
+                document.write("positive number");
+            }
+            else if(x==0){
+                document.write("number is zero");
+            }
+            else{
+                document.write("number is negative");
+            }
+            var day=8;
+    // Use of switch statement.
+            switch(day)
+            {
+                case 1:
+                    document.write("sunday");
+                    break;
+                case 2:
+                    document.write("monday");
+                    break;
+                case 3:
+                    document.write("tuesday");
+                    break;
+                case 4:
+                    document.write("wednesday");
+                    break;
+                case 5:
+                    document.write("thursday");
+                    break;
+                case 6:
+                    document.write("friday");
+                    break;
+                case 7:
+                    document.write("saturday");
+                    break;
+                default:
+                    document.write("value is not exit");
+                
+            }
+        // Use of for loop.
+            var x=2;
+            for(;x<=10;x+=2)
+            {
+                document.write("<h1>"+(x)+"</h1>");
+            }
+            var x=1;
+        // Use of While loop
+            while(x<=10)
+            {
+                document.write("<h2>"+(x)+"</h2>");
+                x=x+1;
+  
+            }
+
+       // Use of function.
+            function add2number(a,b)
+            {
+               
+                var total=a+b;
+                return total;
+               
+
+            }
+
+        // Use of array.
+             var out=add2number(3,5);
+            document.write("<h2>the total is:"+out+"</h2>");
+            var car=["audi","bmw","swift"];
+            var arr1=new Array("apple","banana","papaya");
+            arr1.push("gavava","kalam")
+            arr1.pop("kalam")
+            for(var i=0;i<arr1.length;i++){
+            document.write("<h2>"+arr1[i]+"</h2>")
+        // Create object.
+            var car={
+                car_brand:"audi",
+                car_model:"model",
+                cae_price:3500,
+                
+                teslaAutoPilot:function(){
+                    document.write("<h2>this car has auto pilot</h2>");
+
+                }
+            }
+            document.write("<h2>"+car.car_model+car.car_price+"</h2>");
+        // Use  of function using this key word.
+            function Cars(brand,model,price)
+            {
+                this.brand=brand;
+                this.model=model;
+                this.price=price;
+
+                this.teslaAutoPilot=function(){
+                    document.write("<h2>this car has auto pilot</h2>");
+
+                }
+
+            }
+            var c1=new Cars("tesla","model 3",3500);
+            c1.teslaAutoPilot();
+            document.write("<h2>"+c1.model);
+        // Use of getElementById.
+            function buttonClick()
+            {
+                
+               var str= document.getElementById("heading2")
+                //.innerHTML="telsuhko learning";
+                .innerHTML="Hello Mohd Kalam How are you";
+                alert(str) }
+            
+                function fn1()
+                {
+                  var str = document.getElementById("text1").value;
+                  var str1= document.getElementById("text2").value;
+                  if(str==str1)
+                  {
+                    alert("User name and Passwor is same");
+                  }
+                  else{
+                      alert("user name and password is not same");
+                  }
+                 
+                }
+                function fn1()
+                {
+                    var rd1=document.getElementById("rd1");
+                    var rd2=document.getElementById("rd2");
+                    if(rd1.checked==true)
+                    {
+                        alert("this channal is selected is:"+rd1.value);
+                    }
+                    else if(rd2.checked==true)
+                    {
+                        alert("this channal is selected is:"+rd2.value);  
+                    }
+                    else{
+                        alert("you do not select any checked box please select one");
+                    }
+                }
+            // Use of getElementsByTagName.
+                function fn1()
+                {
+                    var para = document.getElementsByTagName("p");
+                    //alert(select.options[select.selectedIndex].value);
+                   // para[0].style.fontSize = 20;
+                   // para[1].style.color="red";
+                   // para[2].style.fontWeight="bold";
+                   // para[3].style.fontStyle="italic";
+                   for(var i=0;i<para.length;i++)
+                   {
+                       para[i].style.fontSize = 22;
+                   }
+
+                }
+           </script>
+</head>
+<body>
+    <!-- <input type="radio" id="rd1" value="parveez" name="x">parveez</input>
+    <br>
+    <input type="radio" id="rd2" value="rehan" name="x">rehan</input>
+    <br>
+    <button onclick="fn1()" id="btn1" >click me</button> 
+    <select id="selectbox">
+        <option value="simple snippets">simple snippets</option>
+        <option value="stelusko learning">telusko learning</option>
+        <option value="MKhJ">MKHJ</option>
+        </select>
+        <br>
+        <button onclick="fn1()">click me</button>-->
+    <p>this is paragraph 1</p>
+    <p>this is paragraph 2</p>
+
+    <p>this is paragraph 3</p>
+    <p>this is paragraph 4</p>
+    <p>this is paragraph 5</p>
+    <br>
+    <button onclick="fn1()">click me</button>
+
+
+    
+</body>
+</html>

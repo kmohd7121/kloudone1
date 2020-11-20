@@ -1,0 +1,12 @@
+body{
+    background: red;
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+.loop{
+    height:40px;
+    background: blue;
+    text-align: center;
+    bax-shadow: 0 10px 15px rgba(0,0,0,0,1);
+}

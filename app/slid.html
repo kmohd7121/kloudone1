@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/250px-IMDB_Logo_2016.svg.png" 
+        type = "image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    
+    
+    <title>Movie App</title>
+</head>
+<body>
+    <div class="header">
+        <div class="head">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/1200px-IMDB_Logo_2016.svg.png" alt="Logo" id="logo"/>
+        </div>
+        
+        <form>
+            <div id="searchbar">                
+                <input id="headsearch" type="search" placeholder="Search"></input>
+                <button type="submit" id="submit" onsubmit="submit()"><i class="fa fa-search"></i></button>
+            </div>
+        </form>         
+           
+        <div class="headcontent">
+            <p id="watchlist"><i class="fa fa-bookmark"></i>WatchList</p>           
+        </div>
+        <div class="headsign">
+            <p id="signin">Sign in</p>
+        </div>
+    </div>
+
+    <div class="movie-searchable"></div>
+
+    <div class="contentrow1">
+        <div class="cr1">
+            <img src="https://cdn.substack.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F48e00700-48d7-4d9b-8355-edf65fef8da5_1392x696.jpeg" alt="theinvisibleman"/>
+        </div>
+        <div class="cr2">
+            <img src="https://i.ytimg.com/vi/K61-tK7Xlzg/maxresdefault.jpg" alt="joker"/>
+        </div>
+    </div>
+    <div class="nowplay" id="nowplay">
+        <div class="nowplay-topics">
+            <h2 style="color: orange;"> | Now Playing</h2>
+            <h3>Watch Movies Now</h3>
+        </div>
+        <div class="nowplay-content"></div>
+    </div>
+    
+
+    <div class="topratedmovie" id="topratedmovie">
+        <div class="toprated-topic">
+            
+            <h2 style="color: orange;">| Top Rated </h2>
+            <h3>Top rated movies all time</h3>
+        </div>        
+        <div class="toprated-content"></div>
+        
+    </div>
+
+    <div class="upcomingmovies" id="upcomingmovies">
+        <div class="upcoming-topic">
+            <h2 style="color: orange">| Upcoming Movies</h2>
+            <h3>Coming soon to theaters</h3>
+        </div>
+        <div class="upcomingmovies-content"></div>        
+    </div>
+
+    <div class="popularmovie" id="popularmovie">
+        <div class="popular-topic">
+            <h2 style="color: orange;">| Popular Movies</h2>
+            <h3>Watch Most Popular Movies Near You</h3>
+        </div>
+        <div class="populat-content"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-row1">
+            <i class="fa fa-facebook-square" ></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+         
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+        <div class="footer-row2">
+            
+                <ul><a href="#">Get the IMDb App</a></ul>
+                <ul><a href="https://help.imdb.com/imdb?ref_=ft_hlp">Help</a></ul>
+                <ul><a href="https://help.imdb.com/article/imdb/general-information/imdb-site-index/GNCX7BHNSPBTFALQ?ref_=ft_si#so">Site Index</a></ul>
+                <ul><a href="https://pro.imdb.com/in?redirectUrl=https%3A%2F%2Fpro.imdb.com%2F%3Fref_%3Dft_pro%26rf%3Dcons_tf_pro">IMDbPro</a></ul>
+                <ul><a href="https://www.boxofficemojo.com/">Box Office Mojo</a></ul>
+                <ul><a href="https://developer.imdb.com/?ref=ft_ds">IMDb Developer</a></ul>
+            
+        </div>
+        <div class="footer-row3">
+            <ul><a href="https://www.imdb.com/pressroom/?ref_=ft_pr">Press Room</a></ul>
+            <ul><a href="https://advertising.amazon.com/resources/ad-specs/imdb/?ref_=a20m_us_spcs_imdb">Advertising</a></ul>
+            <ul><a href="https://www.amazon.jobs/en/teams/imdb?ref_=ft_jb">Jobs</a></ul>
+            <ul><a href="https://www.imdb.com/privacy?ref_=ft_pvc">Privacy Policy</a></ul>
+            <ul><a href="https://www.amazon.com/b/?&node=5160028011&ref_=ft_iba">Interest-Based Ads</a></ul>
+        </div>
+        <div class="footer-row4">
+            <p>an amazon company</p>
+        </div>
+        <div class="footer-row5">
+            <p>© 1990-2020 by IMDb.com, Inc.</p>
+        </div>
+
+    </div>
+   
+
+    
+    <script src="style.js"></script>
+    
+</body>
+</html>

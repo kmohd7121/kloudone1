@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="movie_app.css" />
+    <title>Movie App</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <form class="form">
+        <div class="logo">
+            <svg id="home_img" class="ipc-logo" xmlns="http://www.w3.org/2000/svg" width="64" height="32" viewBox="0 0 64 32" version="1.1"><g fill="#F5C518"><rect x="0" y="0" width="100%" height="100%" rx="4"></rect></g><g transform="translate(8.000000, 7.000000)" fill="#000000" fill-rule="nonzero"><polygon points="0 18 5 18 5 0 0 0"></polygon><path d="M15.6725178,0 L14.5534833,8.40846934 L13.8582008,3.83502426 C13.65661,2.37009263 13.4632474,1.09175121 13.278113,0 L7,0 L7,18 L11.2416347,18 L11.2580911,6.11380679 L13.0436094,18 L16.0633571,18 L17.7583653,5.8517865 L17.7707076,18 L22,18 L22,0 L15.6725178,0 Z"></path><path d="M24,18 L24,0 L31.8045586,0 C33.5693522,0 35,1.41994415 35,3.17660424 L35,14.8233958 C35,16.5777858 33.5716617,18 31.8045586,18 L24,18 Z M29.8322479,3.2395236 C29.6339219,3.13233348 29.2545158,3.08072342 28.7026524,3.08072342 L28.7026524,14.8914865 C29.4312846,14.8914865 29.8796736,14.7604764 30.0478195,14.4865461 C30.2159654,14.2165858 30.3021941,13.486105 30.3021941,12.2871637 L30.3021941,5.3078959 C30.3021941,4.49404499 30.272014,3.97397442 30.2159654,3.74371416 C30.1599168,3.5134539 30.0348852,3.34671372 29.8322479,3.2395236 Z"></path><path d="M44.4299079,4.50685823 L44.749518,4.50685823 C46.5447098,4.50685823 48,5.91267586 48,7.64486762 L48,14.8619906 C48,16.5950653 46.5451816,18 44.749518,18 L44.4299079,18 C43.3314617,18 42.3602746,17.4736618 41.7718697,16.6682739 L41.4838962,17.7687785 L37,17.7687785 L37,0 L41.7843263,0 L41.7843263,5.78053556 C42.4024982,5.01015739 43.3551514,4.50685823 44.4299079,4.50685823 Z M43.4055679,13.2842155 L43.4055679,9.01907814 C43.4055679,8.31433946 43.3603268,7.85185468 43.2660746,7.63896485 C43.1718224,7.42607505 42.7955881,7.2893916 42.5316822,7.2893916 C42.267776,7.2893916 41.8607934,7.40047379 41.7816216,7.58767002 L41.7816216,9.01907814 L41.7816216,13.4207851 L41.7816216,14.8074788 C41.8721037,15.0130276 42.2602358,15.1274059 42.5316822,15.1274059 C42.8031285,15.1274059 43.1982131,15.0166981 43.281155,14.8074788 C43.3640968,14.5982595 43.4055679,14.0880581 43.4055679,13.2842155 Z"></path></g></svg>
+
+        </div>
+        <div class="menu">
+          <label for="menu-btn" class="btn menu-btn"><i class="fa fa-bars" aria-hidden="true"></i></label>
+          <span class="button-text">Menu</span>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search..."/>
+          <button type="submit" class="btn" id="search">Search</button>
+        </div>
+        <div class="btn1">
+          <span class="btn-text">IMDbPro</span>
+        </div>
+        <div class="btn1">
+          <span class="button-text">Watchlist</span>
+        </div>
+        <div class="btn2">
+          <span class="button-text">Sign In</span>
+        </div>
+
+      </form>
+      <div class="img2">
+        <img src="https://images-na.ssl-images-amazon.com/images/G/02/shazam/970x250-fa68eedb-b5be-410b-b695-db89508cb428.jpg">
+      </div>
+      <!-- <br> -->
+      <div class="maindiv"></div>
+      <br>
+      <span class="search-movie">Search Movies</span>
+      <div id="movies-searchable"></div>
+      <div class="sign">
+        <div class="sign-title">
+          <h2>From your Watchlist</h2>
+        </div>
+          <div class="plus">
+            <div>
+            <img src="https://img.icons8.com/dusk/64/000000/bookmark-ribbon.png"/>
+            </div>
+          </div>
+          <div class="plus1">Sign in to access your Watchlist</div>
+          <div class="plus1" id="plu"> Save shows and movies to keep track of what you want to watch</div>
+          <div class="sign-into">
+            <button class="btn6">Sign into IMDb</button>
+          </div>
+
+      </div>
+      <div id="movies-container"></div>
+      <div class="more-to-watch">
+        <div>
+          <h2>More to watch</h2>
+          <p>IMDb helps you select the perfect next show or movie to watch.</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn7">Watch Guide</button>
+        <button class="btn7" id="btn8">Most Popular</button>
+      </div>
+      <br>
+      <div class="Exclusive">
+        <h1>Exclusive videos</h1>
+      </div>
+      <!--IMDb original start-->
+        <div class="sub-heading">
+          <h2 class="org1">IMDb Originals</h2>
+          <p class="subtitle">Celebrity interviews, trending entertainment stories, and expert analysis</p>
+        </div>
+        <div class="card-container">
+          <div class="video-card">
+            <div class="video" id="vc1">
+              
+            </div>
+            <div class="video-caption">
+              <p>Anne Hathaway: Movie and TV Moments</p>
+            </div>
+          </div>
+  
+          <div class="video-card">
+            <div class="video" id="vc2">
+              
+            </div>
+            <div class="video-caption">
+              <p>The Evolution of Busy Phillips</p>
+            </div>
+          </div>
+  
+          <div class="video-card">
+            <div class="video" id="vc3">
+              
+            </div>
+            <div class="video-caption">
+              <p>What to Watch While You Wait for 'No Time To Die'</p>
+            </div>
+          </div>
+        </div>
+        <br>
+        
+      <!--IMDb  original end -->
+      <div class="Explore-movies">
+        <h1>Explore movies & TV shows</h1>
+      </div>
+      <div class="top-picks">
+        <div class="heading">
+          <h2>In theaters</h2>
+          <p style="color: gray;">Showtimes near you</p>
+        </div>
+  
+        <div class="flexbox-container">
+          <div class="poster-card">
+            <div class="image" id="img12">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.4</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Serious MEN</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img21">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>6.1</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Trolls World Tours</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img31">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.1</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Dilwale Dulhania Le Jayenge</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img41">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>7.8</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Veer-Zaara</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img51">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>5.5</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">EK Tha Tiger</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img61">
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>7.3</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Sir</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- top-picks start -->
+      <br>
+      <div class="top-picks">
+        <div class="heading">
+          <h2>Top Picks</h2>
+        </div>
+  
+        <div class="flexbox-container">
+          <div class="poster-card">
+            <div class="image" id="img1">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.4</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Mirzapur</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img2">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.8</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">The Queen's Gambit</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img3">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>9.6</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Scam 1992</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img4">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.8</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Fight Club</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img5">		
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>8.8</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">Forrest Gump</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+  
+          <div class="poster-card">
+            <div class="image" id="img6">
+            </div>
+  
+            <div class="ratings">
+              <div>
+                <svg width="24" height="30" xmlns="http://www.w3.org/2000/svg" class="ipc-icon ipc-icon--star-inline" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M12 20.1l5.82 3.682c1.066.675 2.37-.322 2.09-1.584l-1.543-6.926 5.146-4.667c.94-.85.435-2.465-.799-2.567l-6.773-.602L13.29.89a1.38 1.38 0 0 0-2.581 0l-2.65 6.53-6.774.602C.052 8.126-.453 9.74.486 10.59l5.147 4.666-1.542 6.926c-.28 1.262 1.023 2.26 2.09 1.585L12 20.099z"></path></svg>
+              </div>
+  
+              <div>
+                <span>9.3</span>
+              </div>
+              
+            </div>
+  
+            <div class="movie-title">
+              <a href="#">The Shawshank Redemption</a>
+            </div>
+  
+            <div class="watchlist">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--add ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"></path></svg>
+              </div>
+  
+              <div>
+                <span>Watchlist</span>
+              </div>
+              
+            </div>
+  
+            <div class="trailer-and-info">
+  
+              <div class="trailer">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--play-arrow ipc-button__icon ipc-button__icon--pre" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z"></path></svg>
+                </div>
+  
+                <div>
+                  <span>Trailer</span>
+                </div>
+                
+              </div>
+  
+              <div class="info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" class="ipc-icon ipc-icon--info" viewBox="0 0 24 24" fill="currentColor" role="presentation"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!-- top-pick end -->
+      <!-- birthday div-->
+
+      <div class="sub-heading">
+				<h2>Born today</h2>
+				<p class="subtitle">People born on November 17</p>
+      </div>
+      <div class="card-container">
+        <div class="birthday-card">
+          <div class="birthday-img" id="image1">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Rachel McAdams<br>42</p>
+          </div>
+        </div>
+        <div class="birthday-card">
+          <div class="birthday-img" id="image2">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Tom Ellis<br>42</p>
+          </div>
+        </div>
+        <div class="birthday-card">
+          <div class="birthday-img" id="image3">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Martin Scorsese<br>78</p>
+          </div>
+        </div>
+        <div class="birthday-card">
+          <div class="birthday-img" id="image4">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Leslie Bibb<br>46</p>
+          </div>
+        </div>
+        <div class="birthday-card">
+          <div class="birthday-img" id="image5">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Harry Lloyd<br>37</p>
+          </div>
+        </div>
+        <div class="birthday-card">
+          <div class="birthday-img" id="image6">
+
+          </div>
+          <div class="birthday-preson">
+            <p>Kara Hayward<br>22</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!--birthday div end-->
+      <!--top reated news start-->
+      <div class="top-head">
+        <div class="heading1">
+          <h2>Recently viewed</h2>
+        </div>
+        <div class="flexbox1-container">
+          <div class="poster1-card">
+            <div class="ipc-watchlist-ribbon ipc-focusable ipc-watchlist-ribbon--m ipc-watchlist-ribbon--baseAlt ipc-watchlist-ribbon--onImage ipc-poster__watchlist-ribbon" aria-label="add to watchlist" role="button" tabindex="0">
+            <div class="image" id="img1">		
+            </div>
+            </div>
+            <div class="movie-title">
+              <a href="#">The New Mutants</a>
+            </div>
+          </div>
+          <div class="poster1-card">
+            <div class="image" id="img2">		
+            </div>
+  
+         
+            <div class="movie-title">
+              <a href="#">Rachel McAdams</a>
+            </div>
+          </div>
+  
+          <div class="poster1-card">
+          <div class="image" id="img3">		
+            </div>
+            <div class="movie-title">
+              <a href="#">Mirzapur</a>
+            </div>
+          </div>
+  
+          <div class="poster1-card">
+            <div class="image" id="img4">		
+            </div>
+            <div class="movie-title">
+              <a href="#">Fight Club</a>
+            </div>
+          </div>
+  
+          <div class="poster1-card">
+            <div class="image" id="img5">		
+            </div>
+            <div class="movie-title">
+              <a href="#">The Haunting</a>
+            </div>
+          </div>
+  
+          <div class="poster1-card">
+            <div class="image" id="img6">
+            </div>
+            <div class="movie-title">
+              <a href="#">#202-Pedro Pa..</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <!--top reated news end -->
+    </div>
+    <div class="get-imdb">
+      <div class="get1">
+        <button class="btn5">Get the IMDb App</button>
+      </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+
+            <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+        
+    </div>
+    <div class="about-site">
+        <a href="#">Get the IMDb App</a>
+        <a href="#">Help</a>
+        <a href="#">Site Index</a>
+        <a href="#">IMDbPro</a>
+        <a href="#">Box Office Mojo</a>
+        <a href="#">IMDb Developer</a>
+    </div>
+    <div class="terms-of-use">
+        <a href="#">Press Room</a>
+        <a href="#">Advertising</a>
+        <a href="#">Jobs</a>
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Interest-Based Ads</a>
+    </div>
+    <div class="company">
+        <a href="#">an amazon company</a> 
+    </div>
+    <div class="footnote">
+        <p>&copy 1990-2020 by IMDb.com, Inc.</p>
+    </div>
+    </footer>
+
+    <script src="movie_app2.js"></script>
+    <script src="movie_app1.js"></script>
+  </body>
+</html>

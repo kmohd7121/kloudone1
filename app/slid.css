@@ -1,0 +1,271 @@
+/* API_KEY : 1f6091b9694f5fd0faad141515ed0f90 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@500&display=swap');
+*{
+    background-color:black;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+}
+#logo{
+    width: 80px;
+    padding-left:100px;
+    padding-top: 25px;
+    
+}
+
+#headsearch{
+   
+    width: 700px;
+    font-size: 17px;
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+} 
+
+
+#submit{
+    float: right;
+    
+    padding: 10px;
+    padding-top: 10px;
+    color: white;
+    background-color: black;
+    font-size: 17px;
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+    
+}
+#searchbar{
+    display: flex;
+    
+    padding-top: 25px;
+    padding-left: 100px;
+}
+#signin{
+    color: white;
+    padding-left: 250%;
+    
+    padding-top: 15px;
+    display: inline-flex;
+}
+.headcontent{
+    color: white !important;
+    margin-left: 10%;
+    padding-top: 15px;
+}
+@media only screen and (max-width:800px){
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+    #logo{
+        width: 60px;
+        padding-left:20px;
+        padding-top: 10px;    
+    }
+    #headsearch{   
+        width: 120px;
+        font-size: 15px;
+        border: 1px solid black;
+        background-color: white;
+        padding: 10px;
+    } 
+    #searchbar{
+        display: flex;        
+        padding-top: 30px;
+        padding-left: 60px;
+    }
+    .headcontent{
+        display: none;
+    }
+    #signin{
+        color: white;
+        padding-left: 150%;
+        
+        padding-top: 15px;
+        display: inline-flex;
+    }
+    
+}
+section{
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+section img{
+    width: 300px;
+    transition: 250ms all;
+}
+#searchimage:hover{
+    margin-left: 0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.movie-searchable{
+    margin-top: 20px;
+    color: white;
+}
+.content{
+    border: 2px solid red;
+    
+    display: none;
+}
+.content div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.content-display{
+    display: block;
+}
+.contentrow1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* padding-left: 20%;
+    padding-right: 20%; */
+}
+
+.cr1 img{
+    width: 50%;
+    height: 250px;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 10px;
+}
+.cr2 img{
+    width: 50%;
+    height: 250px;    
+    padding-left: 20%;
+    padding-right: 20%;
+    border-radius: 10px;
+}
+.contentrow1 img:hover{
+    margin-left: 0 30px;
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}
+.topratedmovie{
+    color: white;
+    padding-left: 50px;
+}
+.toprated-topic{
+    color: white;
+}
+
+.toprated-content{
+    display: flex;
+    flex-direction: column;
+}
+#toprated{
+    color: white;
+}
+#topratedp{
+    color: white;
+}
+#toprate{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    justify-content: space-between !important;
+    padding-right: 10px;
+}
+#topratedtitle{
+    font-size: large;
+}
+#topratedrelease{
+    font-size: medium;
+    padding: -30px;
+}
+#toprated-content{
+    display: flex;
+    flex-direction: column;
+}
+.upcomingmovie-topic {
+    color: white;
+}
+.upcomingmovies{
+    color: white;
+    padding-left: 50px;
+}
+#upcomeimg{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    justify-content: space-between !important;
+    padding-right: 10px;
+}
+#nowplay{
+    color: white;
+    padding-left: 50px;
+}
+#nowplayimg{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    justify-content: space
+}
+.popularmovie{
+    color: white;
+    padding-left: 50px;
+}
+.popular-topic{
+    color: white;
+}
+#popularimg{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    justify-content: space-between !important;
+    padding-right: 10px;
+}
+.footer{
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.footer-row1{
+    padding-left: 45%;
+    justify-content: center;
+    align-items: center;
+}
+.footer-row1 i{
+    font-size: 25px;
+    width: 50px;
+}
+.footer-row2{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+}
+.footer-row2 a{
+    text-decoration: none;
+    color: white;
+}
+.footer-row2 ul a:hover{
+    text-decoration: white;
+    
+}
+.footer-row3{
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+    color: white;
+}
+.footer-row3 a{
+    text-decoration: none;
+    color: white;
+}
+.footer-row4 p{
+    margin-left: 45%;
+}
+.footer-row5{
+    color: white;
+    margin-left: 42%;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    
+ </head>
+    <style type="text/css">
+        div{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 0 auto;
+            padding: 120px;
+            box-sizing: border-box;
+        }
+    </style>
+  <body>
+    <center><h1>welcome to login page</h1></center>
+    <hr>
+
+    <div>
+        username:<br>
+        <input type="text" name="text" id="username">
+        <br><br>
+
+        password:<br>
+        <input type="password" name="text" id="password">
+        <br><br>
+
+        <button onclick="login()">Submit</button>
+    </div>
+
+    <script type="text/javascript">
+    function login(){
+        var name=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        if(name=="world" && password=="123")
+        {
+            alert("you have login");
+        }
+        else{
+            alert("you have not login");
+        }
+    }
+    </script>
+    
+  </body>
+</html>
